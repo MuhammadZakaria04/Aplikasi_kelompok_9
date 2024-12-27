@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamus Istilah Perminyakan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Kamus Istilah Perminyakan</h1>
+            <button class="show-terms" onclick="toggleTerms()">Lihat Istilah</button>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" 
+                       class="search-input" 
+                       id="searchInput"
+                       placeholder="Masukkan istilah yang ingin dicari...">
+                <button class="search-button" onclick="searchTerm()">Cari</button>
+            </div>
+        </div>
+
+        <div class="terms-modal" id="termsModal">
+            <button class="close-button" onclick="toggleTerms()">×</button>
+            <div class="category-list">
+                <div class="category-item" onclick="showCategoryTerms('umum')">Istilah Umum</div>
+                <div class="category-item" onclick="showCategoryTerms('geologi')">Istilah Geologi</div>
+                <div class="category-item" onclick="showCategoryTerms('pengeboran')">Istilah Pengeboran</div>
+                <div class="category-item" onclick="showCategoryTerms('produksi')">Istilah Produksi</div>
+                <div class="category-item" onclick="showCategoryTerms('teknik')">Istilah Teknik</div>
+                <div class="category-item" onclick="showCategoryTerms('ekonomi')">Istilah Ekonomi</div>
+            </div>
+            <div id="categoryTermsList" class="category-terms-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
